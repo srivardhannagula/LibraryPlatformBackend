@@ -45,8 +45,8 @@ public class SecurityConfig {
 		            "http://localhost:3000", 
 		              "https://library-management-platform-ruddy.vercel.app"  
 		        ));
-			config.setAllowedMethods(Collections.singletonList("*"));
-		   // config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
+			//config.setAllowedMethods(Collections.singletonList("*"));
+		   config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
 		    config.setAllowedHeaders(List.of("Authorization", "Content-Type"));
 		    config.setAllowCredentials(true);
 		    UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();

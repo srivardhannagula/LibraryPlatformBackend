@@ -41,11 +41,13 @@ public class SecurityConfig {
 		@Bean
 		public CorsConfigurationSource corsConfigurationSource() {
 		    CorsConfiguration config = new CorsConfiguration();
-		    config.setAllowedOrigins(List.of(
-		            "http://localhost:3000", 
-		              "https://library-management-platform-ruddy.vercel.app"  
-		        ));
+		    // config.setAllowedOrigins(List.of(
+		    //         "http://localhost:3000", 
+		    //           "https://library-management-platform-ruddy.vercel.app"  
+		    //     ));
 			//config.setAllowedMethods(Collections.singletonList("*"));
+			config.addAllowedOrigin("https://library-management-platform-ruddy.vercel.app");  // Ensure the exact URL matches
+
 		   config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
 		    config.setAllowedHeaders(List.of("Authorization", "Content-Type"));
 		    config.setAllowCredentials(true);
